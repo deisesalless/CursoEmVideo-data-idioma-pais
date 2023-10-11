@@ -1,6 +1,8 @@
 
 package entidades;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
@@ -12,6 +14,11 @@ public class Exercicio {
         
         Date relogio = new Date();
         System.out.println("A hora do sistema é: " + relogio.toString());
+        
+        Date hoje = new Date();
+        DateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+        String formatadaData = dataFormatada.format(hoje);
+        System.out.println("A data formatada de hoje é: " + formatadaData);
         
         Locale idioma = Locale.getDefault();
         String language = idioma.getDisplayLanguage();
